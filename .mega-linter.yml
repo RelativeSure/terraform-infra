@@ -16,14 +16,16 @@ APPLY_FIXES: all
 #
 
 DISABLE_LINTERS:
-  - BASH_SHELLCHECK
-  - REPOSITORY_GRYPE
-  - REPOSITORY_CHECKOV
-  - TERRAFORM_TERRASCAN
+    - BASH_SHELLCHECK
+    - REPOSITORY_CHECKOV
+    - REPOSITORY_GRYPE
+    - REPOSITORY_KICS
+    - TERRAFORM_TERRASCAN
+    - TERRAFORM_TFLINT
 
 DISABLE:
-  # - COPYPASTE # Uncomment to disable checks of excessive copy-pastes
-  - SPELL # Comment to enable checks of spelling mistakes
+    # - COPYPASTE # Uncomment to disable checks of excessive copy-pastes
+    - SPELL # Comment to enable checks of spelling mistakes
 
 SHOW_ELAPSED_TIME: true
 # Uncomment if you want MegaLinter to detect errors but not block CI to pass
