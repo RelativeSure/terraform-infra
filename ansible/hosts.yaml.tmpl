@@ -1,0 +1,12 @@
+all:
+    vars:
+        ansible_user: rasmus
+        ansible_port: 2222
+
+    hosts:
+%{ for name, ip in vms ~}
+        ${name}:
+            ansible_host: ${ip}
+            ansible_user: rasmus
+            ansible_port: 2222
+%{ endfor ~}
