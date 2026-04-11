@@ -1,5 +1,5 @@
 variable "microk8s_channel" {
-  type = string
+  type    = string
   default = "1.35"
 }
 
@@ -8,26 +8,26 @@ variable "server_name" {
 }
 
 variable "server_image" {
-  type = string
+  type    = string
   default = "ubuntu-24.04"
 }
 
 variable "server_type" {
-  type = string
+  type    = string
   default = "cx23"
 }
 
 variable "server_location" {
-  type = string
+  type    = string
   default = "fsn1"
 }
 
 variable "server_username" {
-  type = string
+  type    = string
   default = "rasmus"
 }
 
 variable "ssh_public_key" {
-  type = string
+  type    = string
   default = ""
 }

@@ -67,6 +67,17 @@ resource "hcloud_server" "microk8s" {
       - ufw default deny incoming
       - ufw default allow outgoing
       - ufw allow 2222/tcp
+      ### START MicroK8s START ###
+      - ufw allow 16443/tcp
+      - ufw allow 10250/tcp
+      - ufw allow 10255/tcp
+      - ufw allow 25000/tcp
+      - ufw allow 12379/tcp
+      - ufw allow 10257/tcp
+      - ufw allow 10259/tcp
+      - ufw allow 19001/tcp
+      - ufw allow 4789/udp
+      ### END MicroK8s END ###
       - ufw --force enable
 
       # Ensure sshd picks up the new config immediately (still fine if reboot happens later)

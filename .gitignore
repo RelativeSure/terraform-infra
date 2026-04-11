@@ -1,3 +1,5 @@
 .terraform/
 megalinter-reports/
 .venv/
+.claude/
+ansible/hosts.yaml
